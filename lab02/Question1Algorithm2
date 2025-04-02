@@ -1,0 +1,32 @@
+function thirdLargest(arr):
+
+    if length(arr) < 3 then
+        return max(arr)
+    
+    // Initialize trackers
+    firstMax = null
+    secondMax = null 
+    thirdMax = null
+    
+    // Single pass through array
+    for each num in arr do
+        // Skip duplicate values
+        if num == firstMax or num == secondMax or num == thirdMax then
+            continue
+        
+        // Update top three values
+        if firstMax == null or num > max1 then
+            thirdMax = secondMax
+            secondMax = firstMax
+            max1 = num
+        else if secondMax == null or num > secondMax then
+            thirdMax = secondMax
+            secondMax = num
+        else if thirdMax == null or num > thirdMax then
+            thirdMax = num
+    
+    // Return third largest if found, otherwise return max
+    if thirdMax != null then
+        return thirdMax
+    else
+        return firstMax

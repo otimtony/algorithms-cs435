@@ -1,0 +1,30 @@
+Algorithm thirdLargest(arr):
+    
+    if length(arr) < 3:
+        return arr[0]
+    
+    firstMax = arr[0]
+    secondMax = arr[0]
+    thirdMax = arr[0]
+    
+    //first maximum
+    for each element i in arr:
+        if i > firstMax:
+            firstMax = i
+    
+    //second maximum
+    for each element i in arr:
+        if i < firstMax and i > secondMax:
+            secondMax = i
+    if secondMax = firstMax:
+        return firstMax
+    
+    //third maximum
+    for each element i in arr:
+        if i < secondMax and i > thirdMax:
+            thirdMax = i
+    
+    if thirdMax = secondMax:
+        return firstMax
+    else:
+        return thirdMax
